@@ -1,0 +1,42 @@
+{
+  "name": "receipt-printer",
+  "version": "1.0.0",
+  "description": "80mm thermal receipt printer library with ESC/POS commands and opinionated receipt layout presets",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "pwsh -Command \"if (Test-Path dist) { Remove-Item -Recurse -Force dist }\"",
+    "rebuild": "npm run clean && npm run build",
+    "example": "tsc && tsc -p tsconfig.example.json && node dist/example.js",
+    "watch": "tsc --watch",
+    "start": "npm run build && node server.js",
+    "dev": "npm run build && node server.js",
+    "test": "node tests/core.test.js"
+  },
+  "keywords": [
+    "receipt",
+    "printer",
+    "thermal",
+    "pos",
+    "escpos",
+    "80mm",
+    "barcode"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.3.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

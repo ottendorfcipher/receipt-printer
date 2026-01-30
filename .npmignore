@@ -1,0 +1,21 @@
+# Source files (keep only compiled dist)
+*.ts
+!*.d.ts
+tsconfig.json
+
+# Examples and tests
+example.ts
+example.php
+test-*.ps1
+raw-*.ps1
+
+# Development files
+.gitignore
+.vscode/
+.idea/
+
+# Documentation (except README)
+docs/
+
+# Logs
+*.log
